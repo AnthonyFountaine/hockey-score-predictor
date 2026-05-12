@@ -1,0 +1,36 @@
+name: Daily NHL Rankings
+
+on:
+  schedule:
+    # 8:00 AM UTC = 3:00 AM ET (EST).  Adjust to 7:00 for EDT (summer).
+    - cron: '0 8 * * *'
+  workflow_dispatch:   # allows manual trigger from the GitHub Actions tab
+
+jobs:
+  update-rankings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run NHL stats script
+        run: python backend/nhl_stats.py
+        # The script writes data/rankings.json relative to the repo root
+
+      - name: Commit updated rankings
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/rankings.json
+          # Only commit if the file actually changed
+          git diff --staged --quiet || git commit -m "chore: update NHL rankings $(date -u +%Y-%m-%d)"
+          git push

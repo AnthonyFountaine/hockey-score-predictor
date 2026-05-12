@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+
+# Data — keep rankings.json but ignore dated debug files
+data/stats_*.json
+
+# Editor
+.DS_Store
+.idea/
+.vscode/
