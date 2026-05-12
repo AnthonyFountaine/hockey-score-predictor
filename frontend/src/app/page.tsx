@@ -159,7 +159,7 @@ function ListResultPanel({ listKey, result }: { listKey: string; result: ListRes
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>H/A</th>
+                <th>Rank</th><th>Name</th><th>Team</th><th>Position</th><th>H/A</th>
                 <th>G/GP</th><th>L5G</th><th>SOG/G</th><th>OppGA</th><th>Score</th>
               </tr>
             </thead>
@@ -280,7 +280,7 @@ export default function Home() {
                 <table className={styles.table}>
                   <thead>
                     <tr>
-                      <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>H/A</th>
+                      <th>Rank</th><th>Name</th><th>Team</th><th>Position</th><th>H/A</th>
                       <th>G/GP</th><th>L5G</th><th>SOG/G</th><th>OppGA</th><th>Score</th>
                     </tr>
                   </thead>
@@ -311,7 +311,7 @@ export default function Home() {
           </div>
           <p className={styles.helpText}>
             Open the Tim Hortons app and type the players from each list below —
-            one name per line. Last name only works fine (e.g. &ldquo;Matthews&rdquo;).
+            one name per line. Full name must be typed to avoid players with same last name (e.g. &ldquo;Matthew Schaefer&rdquo;).
           </p>
 
           <div className={styles.inputGrid}>
@@ -320,21 +320,21 @@ export default function Home() {
               color="#2ecc71"
               value={list1Text}
               onChange={setList1Text}
-              placeholder={"Matthews\nMcDavid\nOvechkin"}
+              placeholder={"Auston Matthews\nConnor McDavid\nAlex Ovechkin"}
             />
             <PlayerInputZone
               label="List 2 — Less Likely to Score"
               color="#f39c12"
               value={list2Text}
               onChange={setList2Text}
-              placeholder={"Hedman\nFox\nMakar"}
+              placeholder={"Victor Hedman\nNathan MacKinnon\nCale Makar"}
             />
             <PlayerInputZone
               label="List 3 — Unlikely to Score"
               color="#e74c3c"
               value={list3Text}
               onChange={setList3Text}
-              placeholder={"Tkachuk\nBarzal\nPastrnak"}
+              placeholder={"Matthew Tkachuk\nMatthew Barzal\nDavid Pastrnak"}
             />
           </div>
 
