@@ -218,91 +218,52 @@
   text-shadow: 0 0 4px var(--bg);
 }
 
-/* ── Upload ─────────────────────────────────────────────────────────────── */
+/* ── Player name input ───────────────────────────────────────────────────── */
 
-.uploadGrid {
+.inputGrid {
   display:               grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap:                   16px;
   margin-bottom:         20px;
 }
 
-.uploadZone {
+.inputZone {
   border:        2px solid;
   border-radius: var(--radius);
   padding:       16px;
   background:    var(--surface2);
-}
-
-.uploadLabel {
-  font-weight:   600;
-  font-size:     0.9rem;
-  margin-bottom: 10px;
-}
-
-.dropArea {
-  display:        flex;
+  display:       flex;
   flex-direction: column;
-  align-items:    center;
-  justify-content: center;
-  gap:            8px;
-  border:         2px dashed var(--border);
-  border-radius:  var(--radius);
-  padding:        20px 12px;
-  cursor:         pointer;
-  transition:     border-color 0.2s;
-  min-height:     100px;
+  gap:           6px;
 }
 
-.dropArea:hover { border-color: var(--muted); }
-
-.dropIcon { font-size: 1.8rem; }
-
-.dropText {
-  font-size:  0.82rem;
-  color:      var(--muted);
-  text-align: center;
+.inputLabel {
+  font-weight: 600;
+  font-size:   0.9rem;
 }
 
-.thumbRow {
-  display:   flex;
-  flex-wrap: wrap;
-  gap:       8px;
-  margin-top: 10px;
+.inputHint {
+  font-size: 0.78rem;
+  color:     var(--muted);
 }
 
-.thumb {
-  position:      relative;
-  width:         72px;
-  height:        72px;
-  border-radius: 6px;
-  overflow:      hidden;
+.playerTextarea {
+  width:         100%;
+  background:    var(--surface);
   border:        1px solid var(--border);
+  border-radius: var(--radius);
+  color:         var(--text);
+  font-family:   var(--font);
+  font-size:     0.9rem;
+  padding:       10px 12px;
+  resize:        vertical;
+  line-height:   1.6;
+  outline:       none;
+  transition:    border-color 0.15s;
 }
 
-.thumb img {
-  width:      100%;
-  height:     100%;
-  object-fit: cover;
-}
-
-.removeBtn {
-  position:   absolute;
-  top:        2px;
-  right:      2px;
-  background: rgba(0,0,0,0.7);
-  border:     none;
-  color:      #fff;
-  width:      18px;
-  height:     18px;
-  border-radius: 50%;
-  font-size:  14px;
-  cursor:     pointer;
-  line-height: 1;
-  display:    flex;
-  align-items: center;
-  justify-content: center;
-}
+.playerTextarea:focus { border-color: var(--muted); }
+.playerTextarea::placeholder { color: var(--muted); opacity: 0.6; }
 
 /* ── Buttons ────────────────────────────────────────────────────────────── */
 
