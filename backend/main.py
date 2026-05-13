@@ -15,10 +15,11 @@ Deploy: Render.com → New Web Service → connect repo → root dir = backend
         Start command: uvicorn main:app --host 0.0.0.0 --port $PORT
 """
 
+import os
 import json
-import pathlib
 from typing import List
 
+import requests as http
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -33,8 +34,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Path to the JSON written by nhl_stats.py
-DATA_PATH = pathlib.Path(__file__).parent.parent / "data" / "rankings.json"
+# Fetch rankings from GitHub raw content so Render never needs a redeploy
+# when the daily GitHub Actions job updates rankings.json
+GITHUB_USER  = os.environ["GITHUB_USER"]
+GITHUB_REPO  = os.environ["GITHUB_REPO"]
+RANKINGS_URL = (
+    f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}"
+    f"/main/data/rankings.json"
+)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -52,10 +59,12 @@ class AnalyzeRequest(BaseModel):
 # ─────────────────────────────────────────────────────────────────────────────
 
 def load_rankings() -> dict:
-    if not DATA_PATH.exists():
-        raise HTTPException(status_code=503, detail="Rankings not yet generated for today.")
-    with open(DATA_PATH, encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        resp = http.get(RANKINGS_URL, timeout=10)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Could not load rankings: {e}")
 
 
 def match_names_to_rankings(names: List[str], all_ranked: List[dict]) -> List[dict]:

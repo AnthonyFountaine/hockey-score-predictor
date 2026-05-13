@@ -159,7 +159,7 @@ function ListResultPanel({ listKey, result }: { listKey: string; result: ListRes
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Rank</th><th>Name</th><th>Team</th><th>Position</th><th>H/A</th>
+                <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>H/A</th>
                 <th>G/GP</th><th>L5G</th><th>SOG/G</th><th>OppGA</th><th>Score</th>
               </tr>
             </thead>
@@ -192,8 +192,12 @@ export default function Home() {
     setLoadingRanks(true);
     setRanksError(null);
     try {
-      const res  = await fetch(`${API_BASE}/api/rankings`);
-      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      // Fetch directly from GitHub — always reflects the latest commit,
+      // no Render redeploy needed. Add a cache-bust so the browser
+      // doesn't serve a stale version from earlier today.
+      const url = `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USER}/${process.env.NEXT_PUBLIC_GITHUB_REPO}/main/data/rankings.json?t=${Date.now()}`;
+      const res  = await fetch(url);
+      if (!res.ok) throw new Error(`Could not load rankings (${res.status})`);
       const data = await res.json();
       setRankings(data);
     } catch (e: unknown) {
@@ -280,7 +284,7 @@ export default function Home() {
                 <table className={styles.table}>
                   <thead>
                     <tr>
-                      <th>Rank</th><th>Name</th><th>Team</th><th>Position</th><th>H/A</th>
+                      <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>H/A</th>
                       <th>G/GP</th><th>L5G</th><th>SOG/G</th><th>OppGA</th><th>Score</th>
                     </tr>
                   </thead>
@@ -311,7 +315,7 @@ export default function Home() {
           </div>
           <p className={styles.helpText}>
             Open the Tim Hortons app and type the players from each list below —
-            one name per line. Full name must be typed to avoid players with same last name (e.g. &ldquo;Matthew Schaefer&rdquo;).
+            one name per line. Last name only works fine (e.g. &ldquo;Matthews&rdquo;).
           </p>
 
           <div className={styles.inputGrid}>
@@ -320,21 +324,21 @@ export default function Home() {
               color="#2ecc71"
               value={list1Text}
               onChange={setList1Text}
-              placeholder={"Auston Matthews\nConnor McDavid\nAlex Ovechkin"}
+              placeholder={"Matthews\nMcDavid\nOvechkin"}
             />
             <PlayerInputZone
               label="List 2 — Less Likely to Score"
               color="#f39c12"
               value={list2Text}
               onChange={setList2Text}
-              placeholder={"Victor Hedman\nNathan MacKinnon\nCale Makar"}
+              placeholder={"Hedman\nFox\nMakar"}
             />
             <PlayerInputZone
               label="List 3 — Unlikely to Score"
               color="#e74c3c"
               value={list3Text}
               onChange={setList3Text}
-              placeholder={"Matthew Tkachuk\nMatthew Barzal\nDavid Pastrnak"}
+              placeholder={"Tkachuk\nBarzal\nPastrnak"}
             />
           </div>
 
