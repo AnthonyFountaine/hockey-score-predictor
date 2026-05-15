@@ -52,9 +52,7 @@ Replace `YOUR_USERNAME` with your GitHub username.
    - **Build Command**: `pip install -r requirements.txt`
    - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
    - **Plan**: Free
-5. Under **Environment Variables**, add:
-   - Key: `ANTHROPIC_API_KEY`  Value: your Anthropic API key (get one at https://console.anthropic.com)
-6. Click **Create Web Service**
+5. Click **Create Web Service**
 7. Wait ~2 minutes. Copy your Render URL — it will look like `https://hockey-score-predictor-api.onrender.com`
 
 ### Step 4 — Deploy the frontend to Vercel
@@ -86,25 +84,50 @@ The GitHub Action runs automatically at 3 AM ET every day, but you can trigger i
 
 ```
 hockey-score-predictor/
+│
 ├── .github/
 │   └── workflows/
-│       └── daily.yml           # runs nhl_stats.py every morning at 3 AM ET
+│       └── daily.yml               # Runs all 3 scripts at 3 AM ET daily
+│
 ├── backend/
-│   ├── nhl_stats.py            # NHL data fetcher + ranking engine
-│   ├── main.py                 # FastAPI server (image upload + Claude OCR)
+│   ├── nhl_stats.py                # Fetches rosters + computes rankings
+│   │                               #   - Playoff game log for L5G
+│   │                               #   - Bayesian-adjusted G/GP
+│   │                               #   - Reads model_weights.json if present
+│   ├── results_logger.py           # Logs yesterday's actual goal scorers
+│   │                               #   - Appends to training_data.csv
+│   │                               #   - Runs BEFORE nhl_stats.py each morning
+│   ├── train_model.py              # Trains logistic regression on training data
+│   │                               #   - Writes model_weights.json
+│   │                               #   - Skips if < 200 rows exist yet
+│   ├── main.py                     # FastAPI server (name matching endpoint)
 │   └── requirements.txt
+│
 ├── data/
-│   └── rankings.json           # written by nhl_stats.py, read by the site
+│   ├── rankings.json               # Written daily by nhl_stats.py
+│   │                               #   - Read by frontend via GitHub raw URL
+│   │                               #   - Read by backend /api/analyze endpoint
+│   ├── training_data.csv           # Appended daily by results_logger.py
+│   │                               #   - One row per skater per game
+│   │                               #   - Used to train the model
+│   ├── model_weights.json          # Written by train_model.py
+│   │                               #   - Replaces hardcoded weights in nhl_stats.py
+│   │                               #   - Created after 200+ training rows exist
+│   └── logged_dates.json           # Tracks logged dates (prevents duplicates)
+│
 ├── frontend/
-│   ├── src/app/
-│   │   ├── layout.tsx
-│   │   ├── page.tsx            # main UI
-│   │   ├── page.module.css
-│   │   └── globals.css
+│   ├── src/
+│   │   └── app/
+│   │       ├── layout.tsx          # Root layout + metadata
+│   │       ├── page.tsx            # Main UI (rankings table + list input)
+│   │       ├── page.module.css     # Component styles
+│   │       └── globals.css         # Global dark theme variables
 │   ├── package.json
 │   ├── next.config.js
 │   └── tsconfig.json
-└── .gitignore
+│
+├── .gitignore
+└── README.md
 ```
 
 ---

@@ -2,7 +2,7 @@ name: Daily NHL Rankings
 
 on:
   schedule:
-    # 8:00 AM UTC = 3:00 AM ET (EST).  Adjust to 7:00 for EDT (summer).
+    # 8:00 AM UTC = 3:00 AM ET (EST). Adjust to 7:00 for EDT (summer).
     - cron: '0 8 * * *'
   workflow_dispatch:   # allows manual trigger from the GitHub Actions tab
 
@@ -20,17 +20,28 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests numpy scikit-learn
 
-      - name: Run NHL stats script
+      - name: Step 1 — Log yesterday's results
+        run: python backend/results_logger.py
+        # Appends to data/training_data.csv before today's rankings run.
+        # All games from the previous night are guaranteed final by 3 AM ET.
+
+      - name: Step 2 — Retrain model on updated data
+        run: python backend/train_model.py
+        # Reads training_data.csv, trains logistic regression,
+        # writes data/model_weights.json.
+        # Skips gracefully if fewer than 200 rows exist yet.
+
+      - name: Step 3 — Generate today's rankings
         run: python backend/nhl_stats.py
-        # The script writes data/rankings.json relative to the repo root
+        # Reads model_weights.json (or falls back to defaults),
+        # fetches today's rosters and stats, writes data/rankings.json.
 
-      - name: Commit updated rankings
+      - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/rankings.json
-          # Only commit if the file actually changed
-          git diff --staged --quiet || git commit -m "chore: update NHL rankings $(date -u +%Y-%m-%d)"
+          git add data/rankings.json data/training_data.csv data/model_weights.json data/logged_dates.json
+          git diff --staged --quiet || git commit -m "chore: daily update $(date -u +%Y-%m-%d)"
           git push
