@@ -42,6 +42,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/rankings.json data/training_data.csv data/model_weights.json data/logged_dates.json
+          git add --ignore-missing data/rankings.json data/training_data.csv data/model_weights.json data/logged_dates.json
           git diff --staged --quiet || git commit -m "chore: daily update $(date -u +%Y-%m-%d)"
           git push
