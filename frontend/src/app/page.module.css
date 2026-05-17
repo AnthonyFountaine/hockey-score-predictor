@@ -151,6 +151,38 @@
 .statCell { color: var(--muted); font-variant-numeric: tabular-nums; }
 .scoreCell { min-width: 120px; }
 
+.playerLink {
+  color:           var(--text);
+  text-decoration: none;
+  border-bottom:   1px dotted var(--border);
+  transition:      color 0.15s, border-color 0.15s;
+}
+.playerLink:hover {
+  color:        var(--red-light);
+  border-color: var(--red-light);
+}
+
+/* ── No games message ────────────────────────────────────────────────────── */
+
+.noGamesMsg {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            8px;
+  padding:        48px 24px;
+  color:          var(--muted);
+  text-align:     center;
+}
+
+.noGamesIcon { font-size: 2.5rem; }
+
+.noGamesSub {
+  font-size:  0.85rem;
+  color:      var(--muted);
+  opacity:    0.7;
+  font-style: italic;
+}
+
 .tableNote {
   font-size:  0.78rem;
   color:      var(--muted);

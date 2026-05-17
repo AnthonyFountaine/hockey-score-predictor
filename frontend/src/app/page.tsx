@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface Player {
   rank:            number;
+  player_id:       number | null;
   name:            string;
   team_abbrev:     string;
   position:        string;
@@ -15,6 +17,7 @@ interface Player {
   goals_last5:     number | null;
   shots_per_game:  number | null;
   opp_ga_per_game: number | null;
+  in_playoffs:     boolean;
   score:           number;
 }
 
@@ -79,10 +82,16 @@ function RankBadge({ rank }: { rank: number }) {
 }
 
 function PlayerRow({ player }: { player: Player }) {
+  const profileHref = player.player_id ? `/player/${player.player_id}` : null;
+
   return (
     <tr className={styles.playerRow}>
       <td><RankBadge rank={player.rank} /></td>
-      <td className={styles.nameCell}>{player.name}</td>
+      <td className={styles.nameCell}>
+        {profileHref
+          ? <Link href={profileHref} className={styles.playerLink}>{player.name}</Link>
+          : player.name}
+      </td>
       <td>{player.team_abbrev}</td>
       <td>
         <span className={styles.posBadge} data-pos={player.position[0]}>
@@ -176,7 +185,7 @@ function ListResultPanel({ listKey, result }: { listKey: string; result: ListRes
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const [rankings, setRankings]         = useState<{ date: string; ranking: Player[] } | null>(null);
+  const [rankings, setRankings]         = useState<{ date: string; ranking: Player[]; message?: string } | null>(null);
   const [loadingRanks, setLoadingRanks] = useState(false);
   const [ranksError, setRanksError]     = useState<string | null>(null);
 
@@ -278,7 +287,15 @@ export default function Home() {
 
           {ranksError && <p className={styles.error}>{ranksError}</p>}
 
-          {rankings && (
+          {rankings && rankings.message && (
+            <div className={styles.noGamesMsg}>
+              <span className={styles.noGamesIcon}>🏒</span>
+              <p>No NHL games scheduled today.</p>
+              <p className={styles.noGamesSub}>Check back tomorrow — rankings update every morning at 3 AM ET.</p>
+            </div>
+          )}
+
+          {rankings && !rankings.message && rankings.ranking.length > 0 && (
             <div className={styles.tableContainer}>
               <div className={styles.tableWrap}>
                 <table className={styles.table}>
