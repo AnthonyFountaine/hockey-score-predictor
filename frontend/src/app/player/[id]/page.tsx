@@ -29,24 +29,19 @@ interface PlayerInfo {
   sweaterNumber: number;
 }
 
+interface PlayerProfileResponse {
+  player:           PlayerInfo;
+  regularSeasonLog: GameLogEntry[];
+  playoffLog:       GameLogEntry[];
+  season:           string;
+  error?:           string;
+}
+
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const BASE   = "https://api-web.nhle.com/v1";
 const SEASON = "20252026";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
-
-async function nhlfetch(url: string) {
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-      "Accept":     "application/json",
-      "Referer":    "https://www.nhl.com/",
-    },
-  });
-  if (!res.ok) throw new Error(`NHL API returned ${res.status}`);
-  return res.json();
-}
 
 function totals(log: GameLogEntry[]) {
   const gp  = log.length;
@@ -122,19 +117,14 @@ export default function PlayerPage() {
       setLoading(true);
       setError(null);
       try {
-        const [landing, rsData] = await Promise.all([
-          nhlfetch(`${BASE}/player/${id}/landing`),
-          nhlfetch(`${BASE}/player/${id}/game-log/${SEASON}/2`),
-        ]);
-        if (dead) return;
-        setInfo(landing);
-        setRsLog(rsData.gameLog ?? []);
+        const res = await fetch(`/api/player/${id}`);
+        const data = await res.json() as PlayerProfileResponse;
 
-        // Playoff log is optional — swallow errors
-        try {
-          const poData = await nhlfetch(`${BASE}/player/${id}/game-log/${SEASON}/3`);
-          if (!dead) setPoLog(poData.gameLog ?? []);
-        } catch { /* no playoff data */ }
+        if (!res.ok) throw new Error(data.error ?? `Player API returned ${res.status}`);
+        if (dead) return;
+        setInfo(data.player);
+        setRsLog(data.regularSeasonLog ?? []);
+        setPoLog(data.playoffLog ?? []);
       } catch (e: unknown) {
         if (!dead) setError(e instanceof Error ? e.message : "Failed to load player");
       } finally {
