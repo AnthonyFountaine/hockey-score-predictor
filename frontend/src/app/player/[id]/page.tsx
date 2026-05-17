@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
-import styles from "./player.module.css";
+import styles from "../../player.module.css";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -152,6 +152,9 @@ export default function PlayerPage() {
   const firstName  = info?.firstName?.default  ?? "";
   const lastName   = info?.lastName?.default   ?? "";
   const fullName   = [firstName, lastName].filter(Boolean).join(" ") || "Player";
+  const tabs: Array<"all" | "rs" | "po"> = poLog.length > 0
+    ? ["all", "rs", "po"]
+    : ["all", "rs"];
 
   return (
     <main className={styles.main}>
@@ -218,7 +221,7 @@ export default function PlayerPage() {
 
           {/* ── Tabs ── */}
           <div className={styles.tabs}>
-            {(["all", "rs", ...(poLog.length > 0 ? ["po"] : [])] as const).map(t => (
+            {tabs.map(t => (
               <button
                 key={t}
                 className={`${styles.tab} ${tab === t ? styles.tabActive : ""}`}
