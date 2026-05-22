@@ -14,9 +14,17 @@ interface Player {
   position:        string;
   home_or_away:    string;
   goals_per_game:  number | null;
+  points_per_game: number | null;
   goals_last5:     number | null;
   shots_per_game:  number | null;
+  shooting_pct:    number | null;
+  power_play_goals_per_game:  number | null;
+  power_play_points_per_game: number | null;
+  avg_toi_minutes: number | null;
+  last5_shots_per_game: number | null;
+  last5_points:    number | null;
   opp_ga_per_game: number | null;
+  opp_save_pct:    number | null;
   in_playoffs:     boolean;
   score:           number;
 }
@@ -47,11 +55,6 @@ const LIST_LABELS = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-function fmt(val: number | null | undefined, decimals = 3): string {
-  if (val === null || val === undefined) return "—";
-  return val.toFixed(decimals);
-}
-
 function scoreBar(score: number) {
   const pct = Math.round(score * 100);
   return (
@@ -60,6 +63,46 @@ function scoreBar(score: number) {
       <span className={styles.scoreLabel}>{score.toFixed(4)}</span>
     </div>
   );
+}
+
+const INFLUENTIAL_STATS = [
+  { key: "goals_per_game", weightKey: "gpg_bayesian", label: "G/GP", decimals: 3 },
+  { key: "shots_per_game", weightKey: "shots_per_game", label: "SOG/G", decimals: 2 },
+  { key: "goals_last5", weightKey: "goals_last5", label: "L5G", decimals: 0 },
+  { key: "points_per_game", weightKey: "points_per_game", label: "P/GP", decimals: 3 },
+  { key: "power_play_goals_per_game", weightKey: "power_play_goals_per_game", label: "PPG/G", decimals: 3 },
+  { key: "avg_toi_minutes", weightKey: "avg_toi_minutes", label: "TOI", decimals: 1 },
+  { key: "shooting_pct", weightKey: "shooting_pct", label: "SH%", decimals: 3 },
+  { key: "last5_shots_per_game", weightKey: "last5_shots_per_game", label: "L5 SOG/G", decimals: 2 },
+  { key: "last5_points", weightKey: "last5_points", label: "L5 PTS", decimals: 0 },
+  { key: "opp_ga_per_game", weightKey: "opp_ga_per_game", label: "Opp GA/G", decimals: 3 },
+  { key: "opp_save_pct", weightKey: "opp_save_pct", label: "Opp SV%", decimals: 3 },
+  { key: "power_play_points_per_game", weightKey: "power_play_points_per_game", label: "PPP/G", decimals: 3 },
+  { key: "home_or_away", weightKey: "home_binary", label: "H/A", decimals: 0 },
+] as const;
+
+type StatKey = (typeof INFLUENTIAL_STATS)[number]["key"];
+type StatColumn = (typeof INFLUENTIAL_STATS)[number];
+
+function statColumns(featureWeights?: Record<string, number>): StatColumn[] {
+  if (!featureWeights) return [...INFLUENTIAL_STATS];
+  return [...INFLUENTIAL_STATS].sort((a, b) => {
+    const weightDiff = (featureWeights[b.weightKey] ?? 0) - (featureWeights[a.weightKey] ?? 0);
+    return weightDiff || INFLUENTIAL_STATS.indexOf(a) - INFLUENTIAL_STATS.indexOf(b);
+  });
+}
+
+function renderStat(player: Player, key: StatKey, decimals: number) {
+  if (key === "home_or_away") {
+    return (
+      <span className={player.home_or_away === "HOME" ? styles.home : styles.away}>
+        {player.home_or_away}
+      </span>
+    );
+  }
+  const value = player[key];
+  if (typeof value !== "number") return "—";
+  return decimals === 0 ? value.toString() : value.toFixed(decimals);
 }
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -81,7 +124,7 @@ function RankBadge({ rank }: { rank: number }) {
   );
 }
 
-function PlayerRow({ player }: { player: Player }) {
+function PlayerRow({ player, columns = INFLUENTIAL_STATS }: { player: Player; columns?: readonly StatColumn[] }) {
   const profileHref = player.player_id ? `/player/${player.player_id}` : null;
 
   return (
@@ -98,16 +141,12 @@ function PlayerRow({ player }: { player: Player }) {
           {player.position}
         </span>
       </td>
-      <td>
-        <span className={player.home_or_away === "HOME" ? styles.home : styles.away}>
-          {player.home_or_away}
-        </span>
-      </td>
-      <td className={styles.statCell}>{fmt(player.goals_per_game)}</td>
-      <td className={styles.statCell}>{player.goals_last5 ?? "—"}</td>
-      <td className={styles.statCell}>{fmt(player.shots_per_game, 2)}</td>
-      <td className={styles.statCell}>{fmt(player.opp_ga_per_game)}</td>
       <td className={styles.scoreCell}>{scoreBar(player.score)}</td>
+      {columns.map(stat => (
+        <td className={styles.statCell} key={stat.key}>
+          {renderStat(player, stat.key, stat.decimals)}
+        </td>
+      ))}
     </tr>
   );
 }
@@ -168,8 +207,8 @@ function ListResultPanel({ listKey, result }: { listKey: string; result: ListRes
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>H/A</th>
-                <th>G/GP</th><th>L5G</th><th>SOG/G</th><th>OppGA</th><th>Score</th>
+                <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>Score</th>
+                {INFLUENTIAL_STATS.map(stat => <th key={stat.key}>{stat.label}</th>)}
               </tr>
             </thead>
             <tbody>
@@ -185,7 +224,7 @@ function ListResultPanel({ listKey, result }: { listKey: string; result: ListRes
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const [rankings, setRankings]         = useState<{ date: string; ranking: Player[]; message?: string } | null>(null);
+  const [rankings, setRankings]         = useState<{ date: string; ranking: Player[]; feature_weights?: Record<string, number>; message?: string } | null>(null);
   const [loadingRanks, setLoadingRanks] = useState(false);
   const [ranksError, setRanksError]     = useState<string | null>(null);
 
@@ -249,6 +288,7 @@ export default function Home() {
   }
 
   const hasNames = list1Text.trim() || list2Text.trim() || list3Text.trim();
+  const rankingColumns = statColumns(rankings?.feature_weights);
 
   return (
     <main className={styles.main}>
@@ -301,13 +341,13 @@ export default function Home() {
                 <table className={styles.table}>
                   <thead>
                     <tr>
-                      <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>H/A</th>
-                      <th>G/GP</th><th>L5G</th><th>SOG/G</th><th>OppGA</th><th>Score</th>
+                      <th>RK</th><th>Name</th><th>Team</th><th>Pos</th><th>Score</th>
+                      {rankingColumns.map(stat => <th key={stat.key}>{stat.label}</th>)}
                     </tr>
                   </thead>
                   <tbody>
                     {rankings.ranking.map(p => (
-                      <PlayerRow key={`${p.name}-${p.team_abbrev}`} player={p} />
+                      <PlayerRow key={`${p.name}-${p.team_abbrev}`} player={p} columns={rankingColumns} />
                     ))}
                   </tbody>
                 </table>

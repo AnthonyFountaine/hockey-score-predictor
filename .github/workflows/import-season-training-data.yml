@@ -1,0 +1,38 @@
+name: Import Season Training Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'Season id, for example "20252026"'
+        required: true
+        type: string
+
+jobs:
+  import-season:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Import completed games from season
+        run: python backend/import_season_training_data.py "${{ inputs.season }}"
+
+      - name: Commit updated training data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/training_data.csv
+          git diff --staged --quiet || git commit -m "chore: import training data for ${{ inputs.season }}"
+          git push

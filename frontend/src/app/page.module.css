@@ -113,6 +113,7 @@
 }
 
 .table {
+  min-width:       1180px;
   width:           100%;
   border-collapse: collapse;
   font-size:       0.85rem;
@@ -134,7 +135,7 @@
   border-bottom: 1px solid var(--border);
 }
 
-.table th:nth-child(n+6) { text-align: right; }
+.table th:nth-child(n+5) { text-align: right; }
 
 .playerRow { border-bottom: 1px solid var(--border); }
 .playerRow:last-child { border-bottom: none; }
@@ -145,11 +146,11 @@
   vertical-align: middle;
 }
 
-.playerRow td:nth-child(n+6) { text-align: right; }
+.playerRow td:nth-child(n+5) { text-align: right; }
 
 .nameCell { font-weight: 500; min-width: 160px; }
-.statCell { color: var(--muted); font-variant-numeric: tabular-nums; }
-.scoreCell { min-width: 120px; }
+.statCell { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 74px; }
+.scoreCell { min-width: 126px; }
 
 .playerLink {
   color:           var(--text);
