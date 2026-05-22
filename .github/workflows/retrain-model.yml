@@ -6,8 +6,11 @@ on:
 jobs:
   retrain:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
+    env:
+      PYTHONUNBUFFERED: "1"
 
     steps:
       - name: Checkout repo
@@ -19,10 +22,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r backend/requirements.txt
 
       - name: Retrain model
-        run: python backend/train_model.py
+        run: python -u backend/train_model.py
 
       - name: Commit updated model weights
         run: |
