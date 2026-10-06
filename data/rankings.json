@@ -472,7 +472,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 340
+            "rank": 341
           },
           {
             "player_id": 8483513,
@@ -656,7 +656,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 333
+            "rank": 334
           },
           {
             "player_id": 8479980,
@@ -702,7 +702,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 356
+            "rank": 357
           },
           {
             "player_id": 8474600,
@@ -794,7 +794,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 382
+            "rank": 384
           },
           {
             "player_id": 8480246,
@@ -840,7 +840,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 344
+            "rank": 345
           },
           {
             "player_id": 8476869,
@@ -886,7 +886,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 315
+            "rank": 316
           },
           {
             "player_id": 8482806,
@@ -932,7 +932,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 337
+            "rank": 338
           },
           {
             "player_id": 8482482,
@@ -978,7 +978,7 @@
               "w_opp_save_pct": 0.01266,
               "w_home": 0.0
             },
-            "rank": 351
+            "rank": 352
           },
           {
             "player_id": 8481020,
@@ -1698,7 +1698,7 @@
               "w_opp_save_pct": 0.00794,
               "w_home": 0.0163
             },
-            "rank": 374
+            "rank": 376
           },
           {
             "player_id": 8475171,
@@ -1744,7 +1744,7 @@
               "w_opp_save_pct": 0.00794,
               "w_home": 0.0163
             },
-            "rank": 319
+            "rank": 320
           },
           {
             "player_id": 8476931,
@@ -1790,7 +1790,7 @@
               "w_opp_save_pct": 0.00794,
               "w_home": 0.0163
             },
-            "rank": 320
+            "rank": 321
           },
           {
             "player_id": 8478178,
@@ -1928,7 +1928,7 @@
               "w_opp_save_pct": 0.00794,
               "w_home": 0.0163
             },
-            "rank": 336
+            "rank": 337
           },
           {
             "player_id": 8475690,
@@ -1974,7 +1974,7 @@
               "w_opp_save_pct": 0.00794,
               "w_home": 0.0163
             },
-            "rank": 345
+            "rank": 346
           },
           {
             "player_id": 8475683,
@@ -2653,7 +2653,7 @@
               "w_opp_save_pct": 0.02409,
               "w_home": 0.0
             },
-            "rank": 324
+            "rank": 325
           },
           {
             "player_id": 8476906,
@@ -2791,7 +2791,7 @@
               "w_opp_save_pct": 0.02409,
               "w_home": 0.0
             },
-            "rank": 334
+            "rank": 335
           },
           {
             "player_id": 8476958,
@@ -2838,6 +2838,52 @@
               "w_home": 0.0
             },
             "rank": 267
+          },
+          {
+            "player_id": 8479976,
+            "name": "Juuso Välimäki",
+            "jersey": 8,
+            "position": "D",
+            "team_abbrev": "CAR",
+            "home_or_away": "AWAY",
+            "opp_ga_per_game": 4.0,
+            "opp_save_pct": 0.8621,
+            "goals_total": 0,
+            "games_played": 0,
+            "goals_per_game": 0.15,
+            "assists_total": 0,
+            "points_total": 0,
+            "assists_per_game": 0.0,
+            "points_per_game": 0.0,
+            "shots_per_game": 0.0,
+            "shooting_pct": 0.0,
+            "power_play_goals": 0,
+            "power_play_points": 0,
+            "power_play_goals_per_game": 0.0,
+            "power_play_points_per_game": 0.0,
+            "avg_toi_minutes": 0.0,
+            "goals_last5": 0,
+            "last5_shots_per_game": 0.0,
+            "last5_points": 0,
+            "last5_toi_minutes": 0.0,
+            "in_playoffs": false,
+            "score": 0.0145,
+            "model_contributions": {
+              "w_gpg": 0.02309,
+              "w_last5": 0.0,
+              "w_shots": 0.0,
+              "w_shooting_pct": 0.0,
+              "w_points_per_game": 0.0,
+              "w_pp_goals": 0.0,
+              "w_pp_points": 0.0,
+              "w_avg_toi": 0.0,
+              "w_last5_shots": 0.0,
+              "w_last5_points": 0.0,
+              "w_opp_ga": 0.00109,
+              "w_opp_save_pct": 0.02409,
+              "w_home": 0.0
+            },
+            "rank": 375
           },
           {
             "player_id": 8480336,
@@ -3695,7 +3741,7 @@
               "w_opp_save_pct": 0.02073,
               "w_home": 0.0163
             },
-            "rank": 368
+            "rank": 369
           },
           {
             "player_id": 8483457,
@@ -3833,7 +3879,7 @@
               "w_opp_save_pct": 0.02073,
               "w_home": 0.0163
             },
-            "rank": 353
+            "rank": 354
           },
           {
             "player_id": 8482964,
@@ -3879,7 +3925,7 @@
               "w_opp_save_pct": 0.02073,
               "w_home": 0.0163
             },
-            "rank": 354
+            "rank": 355
           },
           {
             "player_id": 8482487,
@@ -4052,7 +4098,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 342
+            "rank": 343
           },
           {
             "player_id": 8476393,
@@ -4328,7 +4374,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 343
+            "rank": 344
           },
           {
             "player_id": 8483676,
@@ -4420,7 +4466,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 317
+            "rank": 318
           },
           {
             "player_id": 8481596,
@@ -4650,7 +4696,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 363
+            "rank": 364
           },
           {
             "player_id": 8482095,
@@ -4742,7 +4788,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 316
+            "rank": 317
           },
           {
             "player_id": 8482105,
@@ -4788,7 +4834,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 377
+            "rank": 379
           },
           {
             "player_id": 8481606,
@@ -4880,7 +4926,7 @@
               "w_opp_save_pct": 0.01211,
               "w_home": 0.0
             },
-            "rank": 329
+            "rank": 330
           },
           {
             "player_id": 8481035,
@@ -5373,6 +5419,52 @@
             "rank": 256
           },
           {
+            "player_id": 8477946,
+            "name": "Dylan Larkin",
+            "jersey": 71,
+            "position": "C",
+            "team_abbrev": "DET",
+            "home_or_away": "HOME",
+            "opp_ga_per_game": 1.5,
+            "opp_save_pct": 0.9375,
+            "goals_total": 0,
+            "games_played": 0,
+            "goals_per_game": 0.15,
+            "assists_total": 0,
+            "points_total": 0,
+            "assists_per_game": 0.0,
+            "points_per_game": 0.0,
+            "shots_per_game": 0.0,
+            "shooting_pct": 0.0,
+            "power_play_goals": 0,
+            "power_play_points": 0,
+            "power_play_goals_per_game": 0.0,
+            "power_play_points_per_game": 0.0,
+            "avg_toi_minutes": 0.0,
+            "goals_last5": 0,
+            "last5_shots_per_game": 0.0,
+            "last5_points": 0,
+            "last5_toi_minutes": 0.0,
+            "in_playoffs": false,
+            "score": 0.0466,
+            "model_contributions": {
+              "w_gpg": 0.02309,
+              "w_last5": 0.0,
+              "w_shots": 0.0,
+              "w_shooting_pct": 0.0,
+              "w_points_per_game": 0.0,
+              "w_pp_goals": 0.0,
+              "w_pp_points": 0.0,
+              "w_avg_toi": 0.0,
+              "w_last5_shots": 0.0,
+              "w_last5_points": 0.0,
+              "w_opp_ga": 0.00018,
+              "w_opp_save_pct": 0.00699,
+              "w_home": 0.0163
+            },
+            "rank": 308
+          },
+          {
             "player_id": 8482802,
             "name": "Carter Mazur",
             "jersey": 34,
@@ -5416,7 +5508,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 308
+            "rank": 309
           },
           {
             "player_id": 8479992,
@@ -5554,7 +5646,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 375
+            "rank": 377
           },
           {
             "player_id": 8475279,
@@ -5600,7 +5692,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 311
+            "rank": 312
           },
           {
             "player_id": 8477971,
@@ -5646,7 +5738,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 364
+            "rank": 365
           },
           {
             "player_id": 8475753,
@@ -5738,7 +5830,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 346
+            "rank": 347
           },
           {
             "player_id": 8483679,
@@ -5784,7 +5876,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 355
+            "rank": 356
           },
           {
             "player_id": 8484223,
@@ -5922,7 +6014,7 @@
               "w_opp_save_pct": 0.00699,
               "w_home": 0.0163
             },
-            "rank": 376
+            "rank": 378
           },
           {
             "player_id": 8476434,
@@ -6647,7 +6739,7 @@
               "w_opp_save_pct": 0.02465,
               "w_home": 0.0
             },
-            "rank": 372
+            "rank": 373
           },
           {
             "player_id": 8483472,
@@ -6693,7 +6785,7 @@
               "w_opp_save_pct": 0.02465,
               "w_home": 0.0
             },
-            "rank": 373
+            "rank": 374
           },
           {
             "player_id": 8478507,
@@ -7689,7 +7781,7 @@
               "w_opp_save_pct": 0.0093,
               "w_home": 0.0163
             },
-            "rank": 325
+            "rank": 326
           },
           {
             "player_id": 8475455,
@@ -7735,7 +7827,7 @@
               "w_opp_save_pct": 0.0093,
               "w_home": 0.0163
             },
-            "rank": 360
+            "rank": 361
           },
           {
             "player_id": 8476462,
@@ -8608,7 +8700,7 @@
               "w_opp_save_pct": 0.04184,
               "w_home": 0.0
             },
-            "rank": 328
+            "rank": 329
           },
           {
             "player_id": 8476463,
@@ -8654,7 +8746,7 @@
               "w_opp_save_pct": 0.04184,
               "w_home": 0.0
             },
-            "rank": 330
+            "rank": 331
           },
           {
             "player_id": 8482122,
@@ -8700,7 +8792,7 @@
               "w_opp_save_pct": 0.04184,
               "w_home": 0.0
             },
-            "rank": 365
+            "rank": 366
           },
           {
             "player_id": 8486166,
@@ -8746,7 +8838,7 @@
               "w_opp_save_pct": 0.04184,
               "w_home": 0.0
             },
-            "rank": 366
+            "rank": 367
           },
           {
             "player_id": 8480800,
@@ -8838,7 +8930,7 @@
               "w_opp_save_pct": 0.04184,
               "w_home": 0.0
             },
-            "rank": 338
+            "rank": 339
           },
           {
             "player_id": 8476874,
@@ -8930,7 +9022,7 @@
               "w_opp_save_pct": 0.04184,
               "w_home": 0.0
             },
-            "rank": 367
+            "rank": 368
           },
           {
             "player_id": 8474716,
@@ -9144,7 +9236,7 @@
               "w_opp_save_pct": 0.00247,
               "w_home": 0.0163
             },
-            "rank": 322
+            "rank": 323
           },
           {
             "player_id": 8482659,
@@ -9282,7 +9374,7 @@
               "w_opp_save_pct": 0.00247,
               "w_home": 0.0163
             },
-            "rank": 323
+            "rank": 324
           },
           {
             "player_id": 8481522,
@@ -9788,7 +9880,7 @@
               "w_opp_save_pct": 0.00247,
               "w_home": 0.0163
             },
-            "rank": 359
+            "rank": 360
           },
           {
             "player_id": 8484305,
@@ -9834,7 +9926,7 @@
               "w_opp_save_pct": 0.00247,
               "w_home": 0.0163
             },
-            "rank": 341
+            "rank": 342
           },
           {
             "player_id": 8482671,
@@ -9972,7 +10064,7 @@
               "w_opp_save_pct": 0.00247,
               "w_home": 0.0163
             },
-            "rank": 378
+            "rank": 380
           },
           {
             "player_id": 8482803,
@@ -10018,7 +10110,7 @@
               "w_opp_save_pct": 0.00247,
               "w_home": 0.0163
             },
-            "rank": 318
+            "rank": 319
           },
           {
             "player_id": 8481551,
@@ -10431,7 +10523,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 357
+            "rank": 358
           },
           {
             "player_id": 8476419,
@@ -10707,7 +10799,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 309
+            "rank": 310
           },
           {
             "player_id": 8482516,
@@ -10753,7 +10845,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 383
+            "rank": 385
           },
           {
             "player_id": 8476429,
@@ -10799,7 +10891,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 384
+            "rank": 386
           },
           {
             "player_id": 8476917,
@@ -10845,7 +10937,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 321
+            "rank": 322
           },
           {
             "player_id": 8477506,
@@ -10891,7 +10983,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 362
+            "rank": 363
           },
           {
             "player_id": 8481014,
@@ -10937,7 +11029,7 @@
               "w_opp_save_pct": 0.00438,
               "w_home": 0.0
             },
-            "rank": 331
+            "rank": 332
           },
           {
             "player_id": 8485366,
@@ -11565,7 +11657,7 @@
               "w_opp_save_pct": 0.0,
               "w_home": 0.0163
             },
-            "rank": 335
+            "rank": 336
           },
           {
             "player_id": 8480009,
@@ -11887,7 +11979,7 @@
               "w_opp_save_pct": 0.0,
               "w_home": 0.0163
             },
-            "rank": 379
+            "rank": 381
           },
           {
             "player_id": 8482666,
@@ -11933,7 +12025,7 @@
               "w_opp_save_pct": 0.0,
               "w_home": 0.0163
             },
-            "rank": 380
+            "rank": 382
           },
           {
             "player_id": 8477969,
@@ -11979,7 +12071,7 @@
               "w_opp_save_pct": 0.0,
               "w_home": 0.0163
             },
-            "rank": 332
+            "rank": 333
           },
           {
             "player_id": 8481525,
@@ -12025,7 +12117,7 @@
               "w_opp_save_pct": 0.0,
               "w_home": 0.0163
             },
-            "rank": 381
+            "rank": 383
           },
           {
             "player_id": 8482073,
@@ -12117,7 +12209,7 @@
               "w_opp_save_pct": 0.0,
               "w_home": 0.0163
             },
-            "rank": 361
+            "rank": 362
           },
           {
             "player_id": 8482193,
@@ -12852,7 +12944,7 @@
               "w_opp_save_pct": 0.02588,
               "w_home": 0.0
             },
-            "rank": 369
+            "rank": 370
           },
           {
             "player_id": 8481598,
@@ -12944,7 +13036,7 @@
               "w_opp_save_pct": 0.02588,
               "w_home": 0.0
             },
-            "rank": 313
+            "rank": 314
           },
           {
             "player_id": 8475764,
@@ -13128,7 +13220,7 @@
               "w_opp_save_pct": 0.02588,
               "w_home": 0.0
             },
-            "rank": 370
+            "rank": 371
           },
           {
             "player_id": 8476892,
@@ -13220,7 +13312,7 @@
               "w_opp_save_pct": 0.02588,
               "w_home": 0.0
             },
-            "rank": 371
+            "rank": 372
           },
           {
             "player_id": 8476412,
@@ -13940,7 +14032,7 @@
               "w_opp_save_pct": 0.01513,
               "w_home": 0.0163
             },
-            "rank": 326
+            "rank": 327
           },
           {
             "player_id": 8474013,
@@ -13986,7 +14078,7 @@
               "w_opp_save_pct": 0.01513,
               "w_home": 0.0163
             },
-            "rank": 347
+            "rank": 348
           },
           {
             "player_id": 8482807,
@@ -14032,7 +14124,7 @@
               "w_opp_save_pct": 0.01513,
               "w_home": 0.0163
             },
-            "rank": 352
+            "rank": 353
           },
           {
             "player_id": 8482176,
@@ -14757,7 +14849,7 @@
               "w_opp_save_pct": 0.00374,
               "w_home": 0.0
             },
-            "rank": 358
+            "rank": 359
           },
           {
             "player_id": 8478483,
@@ -14987,7 +15079,7 @@
               "w_opp_save_pct": 0.00374,
               "w_home": 0.0
             },
-            "rank": 385
+            "rank": 387
           },
           {
             "player_id": 8478396,
@@ -15217,7 +15309,7 @@
               "w_opp_save_pct": 0.00374,
               "w_home": 0.0
             },
-            "rank": 349
+            "rank": 350
           },
           {
             "player_id": 8479394,
@@ -16167,7 +16259,7 @@
               "w_opp_save_pct": 0.0203,
               "w_home": 0.0163
             },
-            "rank": 312
+            "rank": 313
           },
           {
             "player_id": 8479372,
@@ -16213,7 +16305,7 @@
               "w_opp_save_pct": 0.0203,
               "w_home": 0.0163
             },
-            "rank": 350
+            "rank": 351
           },
           {
             "player_id": 8477986,
@@ -16305,7 +16397,7 @@
               "w_opp_save_pct": 0.0203,
               "w_home": 0.0163
             },
-            "rank": 348
+            "rank": 349
           },
           {
             "player_id": 8478916,
@@ -17030,7 +17122,7 @@
               "w_opp_save_pct": 0.0474,
               "w_home": 0.0
             },
-            "rank": 327
+            "rank": 328
           },
           {
             "player_id": 8477932,
@@ -17168,7 +17260,7 @@
               "w_opp_save_pct": 0.0474,
               "w_home": 0.0
             },
-            "rank": 339
+            "rank": 340
           },
           {
             "player_id": 8477495,
@@ -17260,7 +17352,7 @@
               "w_opp_save_pct": 0.0474,
               "w_home": 0.0
             },
-            "rank": 310
+            "rank": 311
           },
           {
             "player_id": 8478859,
@@ -18256,7 +18348,7 @@
               "w_opp_save_pct": 0.01651,
               "w_home": 0.0163
             },
-            "rank": 314
+            "rank": 315
           },
           {
             "player_id": 8476979,
@@ -32452,6 +32544,52 @@
       "rank": 307
     },
     {
+      "player_id": 8477946,
+      "name": "Dylan Larkin",
+      "jersey": 71,
+      "position": "C",
+      "team_abbrev": "DET",
+      "home_or_away": "HOME",
+      "opp_ga_per_game": 1.5,
+      "opp_save_pct": 0.9375,
+      "goals_total": 0,
+      "games_played": 0,
+      "goals_per_game": 0.15,
+      "assists_total": 0,
+      "points_total": 0,
+      "assists_per_game": 0.0,
+      "points_per_game": 0.0,
+      "shots_per_game": 0.0,
+      "shooting_pct": 0.0,
+      "power_play_goals": 0,
+      "power_play_points": 0,
+      "power_play_goals_per_game": 0.0,
+      "power_play_points_per_game": 0.0,
+      "avg_toi_minutes": 0.0,
+      "goals_last5": 0,
+      "last5_shots_per_game": 0.0,
+      "last5_points": 0,
+      "last5_toi_minutes": 0.0,
+      "in_playoffs": false,
+      "score": 0.0466,
+      "model_contributions": {
+        "w_gpg": 0.02309,
+        "w_last5": 0.0,
+        "w_shots": 0.0,
+        "w_shooting_pct": 0.0,
+        "w_points_per_game": 0.0,
+        "w_pp_goals": 0.0,
+        "w_pp_points": 0.0,
+        "w_avg_toi": 0.0,
+        "w_last5_shots": 0.0,
+        "w_last5_points": 0.0,
+        "w_opp_ga": 0.00018,
+        "w_opp_save_pct": 0.00699,
+        "w_home": 0.0163
+      },
+      "rank": 308
+    },
+    {
       "player_id": 8482802,
       "name": "Carter Mazur",
       "jersey": 34,
@@ -32495,7 +32633,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 308
+      "rank": 309
     },
     {
       "player_id": 8477950,
@@ -32541,7 +32679,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 309
+      "rank": 310
     },
     {
       "player_id": 8475179,
@@ -32587,7 +32725,7 @@
         "w_opp_save_pct": 0.0474,
         "w_home": 0.0
       },
-      "rank": 310
+      "rank": 311
     },
     {
       "player_id": 8475279,
@@ -32633,7 +32771,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 311
+      "rank": 312
     },
     {
       "player_id": 8479324,
@@ -32679,7 +32817,7 @@
         "w_opp_save_pct": 0.0203,
         "w_home": 0.0163
       },
-      "rank": 312
+      "rank": 313
     },
     {
       "player_id": 8478443,
@@ -32725,7 +32863,7 @@
         "w_opp_save_pct": 0.02588,
         "w_home": 0.0
       },
-      "rank": 313
+      "rank": 314
     },
     {
       "player_id": 8476441,
@@ -32771,7 +32909,7 @@
         "w_opp_save_pct": 0.01651,
         "w_home": 0.0163
       },
-      "rank": 314
+      "rank": 315
     },
     {
       "player_id": 8476869,
@@ -32817,7 +32955,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 315
+      "rank": 316
     },
     {
       "player_id": 8484321,
@@ -32863,7 +33001,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 316
+      "rank": 317
     },
     {
       "player_id": 8478173,
@@ -32909,7 +33047,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 317
+      "rank": 318
     },
     {
       "player_id": 8482803,
@@ -32955,7 +33093,7 @@
         "w_opp_save_pct": 0.00247,
         "w_home": 0.0163
       },
-      "rank": 318
+      "rank": 319
     },
     {
       "player_id": 8475171,
@@ -33001,7 +33139,7 @@
         "w_opp_save_pct": 0.00794,
         "w_home": 0.0163
       },
-      "rank": 319
+      "rank": 320
     },
     {
       "player_id": 8476931,
@@ -33047,7 +33185,7 @@
         "w_opp_save_pct": 0.00794,
         "w_home": 0.0163
       },
-      "rank": 320
+      "rank": 321
     },
     {
       "player_id": 8476917,
@@ -33093,7 +33231,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 321
+      "rank": 322
     },
     {
       "player_id": 8479941,
@@ -33139,7 +33277,7 @@
         "w_opp_save_pct": 0.00247,
         "w_home": 0.0163
       },
-      "rank": 322
+      "rank": 323
     },
     {
       "player_id": 8482896,
@@ -33185,7 +33323,7 @@
         "w_opp_save_pct": 0.00247,
         "w_home": 0.0163
       },
-      "rank": 323
+      "rank": 324
     },
     {
       "player_id": 8478970,
@@ -33231,7 +33369,7 @@
         "w_opp_save_pct": 0.02409,
         "w_home": 0.0
       },
-      "rank": 324
+      "rank": 325
     },
     {
       "player_id": 8480990,
@@ -33277,7 +33415,7 @@
         "w_opp_save_pct": 0.0093,
         "w_home": 0.0163
       },
-      "rank": 325
+      "rank": 326
     },
     {
       "player_id": 8481524,
@@ -33323,7 +33461,7 @@
         "w_opp_save_pct": 0.01513,
         "w_home": 0.0163
       },
-      "rank": 326
+      "rank": 327
     },
     {
       "player_id": 8484304,
@@ -33369,7 +33507,7 @@
         "w_opp_save_pct": 0.0474,
         "w_home": 0.0
       },
-      "rank": 327
+      "rank": 328
     },
     {
       "player_id": 8474567,
@@ -33415,7 +33553,7 @@
         "w_opp_save_pct": 0.04184,
         "w_home": 0.0
       },
-      "rank": 328
+      "rank": 329
     },
     {
       "player_id": 8484759,
@@ -33461,7 +33599,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 329
+      "rank": 330
     },
     {
       "player_id": 8476463,
@@ -33507,7 +33645,7 @@
         "w_opp_save_pct": 0.04184,
         "w_home": 0.0
       },
-      "rank": 330
+      "rank": 331
     },
     {
       "player_id": 8481014,
@@ -33553,7 +33691,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 331
+      "rank": 332
     },
     {
       "player_id": 8477969,
@@ -33599,7 +33737,7 @@
         "w_opp_save_pct": 0.0,
         "w_home": 0.0163
       },
-      "rank": 332
+      "rank": 333
     },
     {
       "player_id": 8482072,
@@ -33645,7 +33783,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 333
+      "rank": 334
     },
     {
       "player_id": 8476422,
@@ -33691,7 +33829,7 @@
         "w_opp_save_pct": 0.02409,
         "w_home": 0.0
       },
-      "rank": 334
+      "rank": 335
     },
     {
       "player_id": 8483669,
@@ -33737,7 +33875,7 @@
         "w_opp_save_pct": 0.0,
         "w_home": 0.0163
       },
-      "rank": 335
+      "rank": 336
     },
     {
       "player_id": 8479442,
@@ -33783,7 +33921,7 @@
         "w_opp_save_pct": 0.00794,
         "w_home": 0.0163
       },
-      "rank": 336
+      "rank": 337
     },
     {
       "player_id": 8482806,
@@ -33829,7 +33967,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 337
+      "rank": 338
     },
     {
       "player_id": 8482094,
@@ -33875,7 +34013,7 @@
         "w_opp_save_pct": 0.04184,
         "w_home": 0.0
       },
-      "rank": 338
+      "rank": 339
     },
     {
       "player_id": 8475462,
@@ -33921,7 +34059,7 @@
         "w_opp_save_pct": 0.0474,
         "w_home": 0.0
       },
-      "rank": 339
+      "rank": 340
     },
     {
       "player_id": 8486189,
@@ -33967,7 +34105,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 340
+      "rank": 341
     },
     {
       "player_id": 8484305,
@@ -34013,7 +34151,7 @@
         "w_opp_save_pct": 0.00247,
         "w_home": 0.0163
       },
-      "rank": 341
+      "rank": 342
     },
     {
       "player_id": 8477444,
@@ -34059,7 +34197,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 342
+      "rank": 343
     },
     {
       "player_id": 8482092,
@@ -34105,7 +34243,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 343
+      "rank": 344
     },
     {
       "player_id": 8480246,
@@ -34151,7 +34289,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 344
+      "rank": 345
     },
     {
       "player_id": 8475690,
@@ -34197,7 +34335,7 @@
         "w_opp_save_pct": 0.00794,
         "w_home": 0.0163
       },
-      "rank": 345
+      "rank": 346
     },
     {
       "player_id": 8481607,
@@ -34243,7 +34381,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 346
+      "rank": 347
     },
     {
       "player_id": 8474013,
@@ -34289,7 +34427,7 @@
         "w_opp_save_pct": 0.01513,
         "w_home": 0.0163
       },
-      "rank": 347
+      "rank": 348
     },
     {
       "player_id": 8482866,
@@ -34335,7 +34473,7 @@
         "w_opp_save_pct": 0.0203,
         "w_home": 0.0163
       },
-      "rank": 348
+      "rank": 349
     },
     {
       "player_id": 8478450,
@@ -34381,7 +34519,7 @@
         "w_opp_save_pct": 0.00374,
         "w_home": 0.0
       },
-      "rank": 349
+      "rank": 350
     },
     {
       "player_id": 8479372,
@@ -34427,7 +34565,7 @@
         "w_opp_save_pct": 0.0203,
         "w_home": 0.0163
       },
-      "rank": 350
+      "rank": 351
     },
     {
       "player_id": 8482482,
@@ -34473,7 +34611,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 351
+      "rank": 352
     },
     {
       "player_id": 8482807,
@@ -34519,7 +34657,7 @@
         "w_opp_save_pct": 0.01513,
         "w_home": 0.0163
       },
-      "rank": 352
+      "rank": 353
     },
     {
       "player_id": 8481593,
@@ -34565,7 +34703,7 @@
         "w_opp_save_pct": 0.02073,
         "w_home": 0.0163
       },
-      "rank": 353
+      "rank": 354
     },
     {
       "player_id": 8482964,
@@ -34611,7 +34749,7 @@
         "w_opp_save_pct": 0.02073,
         "w_home": 0.0163
       },
-      "rank": 354
+      "rank": 355
     },
     {
       "player_id": 8483679,
@@ -34657,7 +34795,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 355
+      "rank": 356
     },
     {
       "player_id": 8479980,
@@ -34703,7 +34841,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 356
+      "rank": 357
     },
     {
       "player_id": 8481237,
@@ -34749,7 +34887,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 357
+      "rank": 358
     },
     {
       "player_id": 8481534,
@@ -34795,7 +34933,7 @@
         "w_opp_save_pct": 0.00374,
         "w_home": 0.0
       },
-      "rank": 358
+      "rank": 359
     },
     {
       "player_id": 8476891,
@@ -34841,7 +34979,7 @@
         "w_opp_save_pct": 0.00247,
         "w_home": 0.0163
       },
-      "rank": 359
+      "rank": 360
     },
     {
       "player_id": 8475455,
@@ -34887,7 +35025,7 @@
         "w_opp_save_pct": 0.0093,
         "w_home": 0.0163
       },
-      "rank": 360
+      "rank": 361
     },
     {
       "player_id": 8485957,
@@ -34933,7 +35071,7 @@
         "w_opp_save_pct": 0.0,
         "w_home": 0.0163
       },
-      "rank": 361
+      "rank": 362
     },
     {
       "player_id": 8477506,
@@ -34979,7 +35117,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 362
+      "rank": 363
     },
     {
       "player_id": 8480075,
@@ -35025,7 +35163,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 363
+      "rank": 364
     },
     {
       "player_id": 8477971,
@@ -35071,7 +35209,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 364
+      "rank": 365
     },
     {
       "player_id": 8482122,
@@ -35117,7 +35255,7 @@
         "w_opp_save_pct": 0.04184,
         "w_home": 0.0
       },
-      "rank": 365
+      "rank": 366
     },
     {
       "player_id": 8486166,
@@ -35163,7 +35301,7 @@
         "w_opp_save_pct": 0.04184,
         "w_home": 0.0
       },
-      "rank": 366
+      "rank": 367
     },
     {
       "player_id": 8483766,
@@ -35209,7 +35347,7 @@
         "w_opp_save_pct": 0.04184,
         "w_home": 0.0
       },
-      "rank": 367
+      "rank": 368
     },
     {
       "player_id": 8483686,
@@ -35255,7 +35393,7 @@
         "w_opp_save_pct": 0.02073,
         "w_home": 0.0163
       },
-      "rank": 368
+      "rank": 369
     },
     {
       "player_id": 8482111,
@@ -35301,7 +35439,7 @@
         "w_opp_save_pct": 0.02588,
         "w_home": 0.0
       },
-      "rank": 369
+      "rank": 370
     },
     {
       "player_id": 8482733,
@@ -35347,7 +35485,7 @@
         "w_opp_save_pct": 0.02588,
         "w_home": 0.0
       },
-      "rank": 370
+      "rank": 371
     },
     {
       "player_id": 8481006,
@@ -35393,7 +35531,7 @@
         "w_opp_save_pct": 0.02588,
         "w_home": 0.0
       },
-      "rank": 371
+      "rank": 372
     },
     {
       "player_id": 8480084,
@@ -35439,7 +35577,7 @@
         "w_opp_save_pct": 0.02465,
         "w_home": 0.0
       },
-      "rank": 372
+      "rank": 373
     },
     {
       "player_id": 8483472,
@@ -35485,7 +35623,53 @@
         "w_opp_save_pct": 0.02465,
         "w_home": 0.0
       },
-      "rank": 373
+      "rank": 374
+    },
+    {
+      "player_id": 8479976,
+      "name": "Juuso Välimäki",
+      "jersey": 8,
+      "position": "D",
+      "team_abbrev": "CAR",
+      "home_or_away": "AWAY",
+      "opp_ga_per_game": 4.0,
+      "opp_save_pct": 0.8621,
+      "goals_total": 0,
+      "games_played": 0,
+      "goals_per_game": 0.15,
+      "assists_total": 0,
+      "points_total": 0,
+      "assists_per_game": 0.0,
+      "points_per_game": 0.0,
+      "shots_per_game": 0.0,
+      "shooting_pct": 0.0,
+      "power_play_goals": 0,
+      "power_play_points": 0,
+      "power_play_goals_per_game": 0.0,
+      "power_play_points_per_game": 0.0,
+      "avg_toi_minutes": 0.0,
+      "goals_last5": 0,
+      "last5_shots_per_game": 0.0,
+      "last5_points": 0,
+      "last5_toi_minutes": 0.0,
+      "in_playoffs": false,
+      "score": 0.0145,
+      "model_contributions": {
+        "w_gpg": 0.02309,
+        "w_last5": 0.0,
+        "w_shots": 0.0,
+        "w_shooting_pct": 0.0,
+        "w_points_per_game": 0.0,
+        "w_pp_goals": 0.0,
+        "w_pp_points": 0.0,
+        "w_avg_toi": 0.0,
+        "w_last5_shots": 0.0,
+        "w_last5_points": 0.0,
+        "w_opp_ga": 0.00109,
+        "w_opp_save_pct": 0.02409,
+        "w_home": 0.0
+      },
+      "rank": 375
     },
     {
       "player_id": 8483565,
@@ -35531,7 +35715,7 @@
         "w_opp_save_pct": 0.00794,
         "w_home": 0.0163
       },
-      "rank": 374
+      "rank": 376
     },
     {
       "player_id": 8480879,
@@ -35577,7 +35761,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 375
+      "rank": 377
     },
     {
       "player_id": 8482171,
@@ -35623,7 +35807,7 @@
         "w_opp_save_pct": 0.00699,
         "w_home": 0.0163
       },
-      "rank": 376
+      "rank": 378
     },
     {
       "player_id": 8482105,
@@ -35669,7 +35853,7 @@
         "w_opp_save_pct": 0.01211,
         "w_home": 0.0
       },
-      "rank": 377
+      "rank": 379
     },
     {
       "player_id": 8479982,
@@ -35715,7 +35899,7 @@
         "w_opp_save_pct": 0.00247,
         "w_home": 0.0163
       },
-      "rank": 378
+      "rank": 380
     },
     {
       "player_id": 8482861,
@@ -35761,7 +35945,7 @@
         "w_opp_save_pct": 0.0,
         "w_home": 0.0163
       },
-      "rank": 379
+      "rank": 381
     },
     {
       "player_id": 8482666,
@@ -35807,7 +35991,7 @@
         "w_opp_save_pct": 0.0,
         "w_home": 0.0163
       },
-      "rank": 380
+      "rank": 382
     },
     {
       "player_id": 8481525,
@@ -35853,7 +36037,7 @@
         "w_opp_save_pct": 0.0,
         "w_home": 0.0163
       },
-      "rank": 381
+      "rank": 383
     },
     {
       "player_id": 8480950,
@@ -35899,7 +36083,7 @@
         "w_opp_save_pct": 0.01266,
         "w_home": 0.0
       },
-      "rank": 382
+      "rank": 384
     },
     {
       "player_id": 8482516,
@@ -35945,7 +36129,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 383
+      "rank": 385
     },
     {
       "player_id": 8476429,
@@ -35991,7 +36175,7 @@
         "w_opp_save_pct": 0.00438,
         "w_home": 0.0
       },
-      "rank": 384
+      "rank": 386
     },
     {
       "player_id": 8479639,
@@ -36037,7 +36221,7 @@
         "w_opp_save_pct": 0.00374,
         "w_home": 0.0
       },
-      "rank": 385
+      "rank": 387
     }
   ],
   "model_trained": true,
