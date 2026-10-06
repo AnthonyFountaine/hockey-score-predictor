@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 
 BASE = "https://api-web.nhle.com/v1"
-SEASON = os.environ.get("NHL_SEASON", "20252026")
+SEASON = os.environ.get("NHL_SEASON", "20262027")
 
 LEAGUE_AVG_GPG = 0.15
 SHRINK_K = 20
